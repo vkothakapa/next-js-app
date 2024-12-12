@@ -13,6 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - run: docker build . -t vijayvardhanreddy/next-js-app-githubactions
+    - run: docker build . -t vkothakapa/next-js-app
     - run: echo "${{secrets.DOCKERHUB_PASSWORD1}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME1}} --password-stdin 
     - run: docker push vijayvardhanreddy/next-js-app-githubactions:latest
